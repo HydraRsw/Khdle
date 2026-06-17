@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  color: #0078d7;
+}
+
+.search-container {
+  margin: 30px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 280px;
+  border-radius: 6px;
+  border: 2px solid #333;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #0078d7;
+}
+
+.autocomplete-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+  border: 2px solid #333;
+  border-top: none;
+  z-index: 100;
+  border-radius: 0 0 6px 6px;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.autocomplete-item:hover {
+  background-color: #0078d7;
+}
+
+.autocomplete-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+.game-grid {
+  width: 100%;
+  max-width: 820px;
+  margin-top: 20px;
+}
+
+.attributes-header, .result-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.header-box {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #333;
+  color: #aaa;
+}
+
+.box {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.correct {
+  background-color: #1b4d3e;
+  border: 2px solid #2e8b57;
+}
+
+.incorrect {
+  background-color: #661c1c;
+  border: 2px solid #b22222;
+}
+
+/* Contenedor de Victoria estilo Loldle */
+.victory-container {
+  background-color: #123524; /* Fondo verde oscuro de éxito */
+  border: 2px solid #2e8b57;
+  border-radius: 12px;
+  padding: 25px 40px;
+  width: 100%;
+  max-width: 450px;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.victory-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.victory-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.victory-character-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  background-color: #2a2a2a;
+}
+
+.victory-details {
+  text-align: left;
+}
+
+.victory-text-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.victory-character-name {
+  margin: 2px 0 0 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.victory-stats {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.highlight-attempts {
+  color: #38bdf8; /* Azul claro para destacar el número */
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-left: 5px;
+}
