@@ -1,78 +1,54 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 function SearchBox({ personajes, onGuess }) {
-  const [inputValue, setInputValue] = useState('');
-  const [suggestions, setSuggestions] = useState([]);
-  const dropdownRef = useRef(null);
+  const [input, setInput] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Manejar el cambio del input y aplicar el filtro startsWith
-  const handleInputChange = (e) => {
-    const value = e.target.value;
-    setInputValue(value);
 
-    const normalValue = value.trim().toLowerCase();
-    if (!normalValue) {
-      setSuggestions([]);
-      return;
-    }
+  const filtrados = personajes.filter(p => 
+    p.name.toLowerCase().includes(input.toLowerCase())
+  );
 
-    // Filtramos estrictamente los personajes que EMPIECEN con la letra/letras
-    const filtered = personajes.filter(p => 
-      p.name.toLowerCase().startsWith(normalValue)
-    );
-    setSuggestions(filtered);
-  };
-
-  const selectCharacter = (personaje) => {
-    setInputValue('');
-    setSuggestions([]);
+  const handleSelect = (personaje) => {
     onGuess(personaje);
+    setInput('');
+    setIsOpen(false);
   };
-
-  // Cerrar el dropdown si el usuario hace clic fuera del buscador
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setSuggestions([]);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   return (
-    <div className="search-container" ref={dropdownRef}>
-      <div className="input-wrapper">
+    <div className="search-container">
+      <div className="search-input-row">
         <input
           type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="Type character name..."
-          autoComplete="off"
+          placeholder="Escribe el nombre de un personaje..."
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
+            setIsOpen(e.target.value.length > 0);
+          }}
+          onFocus={() => input.length > 0 && setIsOpen(true)}
         />
-        {suggestions.length > 0 && (
-          <div className="autocomplete-items">
-            {suggestions.map((p) => (
-              <div 
-                key={p.id} 
-                className="autocomplete-item"
-                onClick={() => selectCharacter(p)}
-              >
-                <img 
-                  src={p.image} 
-                  alt={p.name} 
-                  onError={(e) => e.target.src = 'https://via.placeholder.com/100?text=KH'} 
-                />
-                <span>{p.name}</span>
-              </div>
-            ))}
-          </div>
-        )}
+        <button onClick={() => filtrados.length > 0 && handleSelect(filtrados[0])}>
+          Guess
+        </button>
       </div>
-      <button onClick={() => {
-        const exactMatch = personajes.find(p => p.name.toLowerCase() === inputValue.trim().toLowerCase());
-        if (exactMatch) selectCharacter(exactMatch);
-      }}>Guess</button>
+
+      {/* Dropdown de sugerencias */}
+      {isOpen && filtrados.length > 0 && (
+        <ul className="suggestions-list">
+          {filtrados.map((p) => (
+            <li key={p.id} onClick={() => handleSelect(p)}>
+              <img 
+                src={p.image.startsWith('http') ? `https://images.weserv.nl/?url=${p.image}` : p.image} 
+                alt={p.name} 
+                className="dropdown-avatar"
+                onError={(e) => e.target.src = 'https://via.placeholder.com/40?text=KH'}
+              />
+              <span>{p.name}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
