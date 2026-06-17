@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-function SearchBox({ personajes, onGuess }) {
+// Recibimos 'guesses' aquí (por defecto un arreglo vacío si no viene nada)
+function SearchBox({ personajes, onGuess, guesses = [] }) {
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  // CORRECCIÓN AQUÍ: Filtramos si el nombre INCLUYE el texto escrito en cualquier parte
+  // FILTRO MEJORADO: 
+  // 1. Revisa si el nombre incluye lo escrito.
+  // 2. Revisa que el personaje NO esté ya dentro de la lista de intentos (guesses).
   const filtrados = personajes.filter((p) =>
-    p.name.toLowerCase().includes(input.toLowerCase()),
+    p.name.toLowerCase().includes(input.toLowerCase()) &&
+    !guesses.some((g) => g.id === p.id)
   );
 
   const handleSelect = (personaje) => {
@@ -40,11 +44,11 @@ function SearchBox({ personajes, onGuess }) {
           {filtrados.map((p) => (
             <li key={p.id} onClick={() => handleSelect(p)}>
               <img 
-  src={p.image && p.image.startsWith('http') ? `https://images.weserv.nl/?url=${p.image}` : `${import.meta.env.BASE_URL}${p.image || ''}`} 
-  alt={p.name} 
-  className="dropdown-avatar"
-  onError={(e) => e.target.src = 'https://via.placeholder.com/40?text=KH'}
-/>
+                src={p.image && p.image.startsWith('http') ? `https://images.weserv.nl/?url=${p.image}` : `${import.meta.env.BASE_URL}${p.image || ''}`} 
+                alt={p.name} 
+                className="dropdown-avatar"
+                onError={(e) => e.target.src = 'https://via.placeholder.com/40?text=KH'}
+              />
               <span>{p.name}</span>
             </li>
           ))}

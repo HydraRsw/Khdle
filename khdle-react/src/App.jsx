@@ -72,15 +72,15 @@ function App() {
         <p>Guess the Kingdom Hearts character of the day!</p>
       </header>
 
-      {/* Contenedor wrapper para el buscador y el botón Give Up al lado */}
-      {!isGameOver && (
-        <div className="search-and-actions-wrapper">
-          <SearchBox personajes={personajes} onGuess={handleGuess} />
-          <button className="give-up-btn" onClick={() => setHasGivenUp(true)}>
-            Give Up
-          </button>
-        </div>
-      )}
+      {/* Le pasamos guesses al buscador */}
+{!isGameOver && (
+  <div className="search-and-actions-wrapper">
+    <SearchBox personajes={personajes} onGuess={handleGuess} guesses={guesses} />
+    <button className="give-up-btn" onClick={() => setHasGivenUp(true)}>
+      Give Up
+    </button>
+  </div>
+)}
       
       {/* Componente de Victoria al estilo Loldle (Le pasamos resetGame para su botón) */}
       {hasWon && secretCharacter && (
