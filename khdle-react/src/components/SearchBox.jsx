@@ -39,18 +39,12 @@ function SearchBox({ personajes, onGuess }) {
         <ul className="suggestions-list">
           {filtrados.map((p) => (
             <li key={p.id} onClick={() => handleSelect(p)}>
-              <img
-                src={
-                  p.image.startsWith("http")
-                    ? `https://images.weserv.nl/?url=${p.image}`
-                    : `${import.meta.env.BASE_URL}${p.image}`
-                }
-                alt={p.name}
-                className="dropdown-avatar"
-                onError={(e) =>
-                  (e.target.src = "https://via.placeholder.com/40?text=KH")
-                }
-              />
+              <img 
+  src={p.image && p.image.startsWith('http') ? `https://images.weserv.nl/?url=${p.image}` : `${import.meta.env.BASE_URL}${p.image || ''}`} 
+  alt={p.name} 
+  className="dropdown-avatar"
+  onError={(e) => e.target.src = 'https://via.placeholder.com/40?text=KH'}
+/>
               <span>{p.name}</span>
             </li>
           ))}
