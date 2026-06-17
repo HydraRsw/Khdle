@@ -2109,7 +2109,7 @@
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/kingdomhearts/images/0/0a/Axel_KHHD1.png/revision/latest?cb=20190217044616"
+      "image": "/public/personajes/Axel.webp"
     },
      {
       "id": 193,
@@ -2120,7 +2120,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/kingdomhearts/images/4/49/Lauriam_2_KHUX.png/revision/latest?cb=20210601171841"
+      "image": "/public/personajes/Lauriam.webp"
     },
     {
       "id": 194,
@@ -2131,6 +2131,6 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/kingdomhearts/images/a/a8/Elrena_KHUX.png/revision/latest?cb=20210601172102"
+      "image": "/public/personajes/Elrena.webp"
     }
   ]
