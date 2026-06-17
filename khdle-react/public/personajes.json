@@ -1684,14 +1684,14 @@
     },
     {
       "id": 154,
-      "name": "Moana",
-      "gender": "Female",
-      "alignment": "Light",
-      "weapon": "Oar",
-      "origin": "Union X",
-      "debut": "Union X",
-      "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/7/7d/Profile_-_Moana.png"
+      "name": "Armored Ventus Nightmare",
+      "gender": "Male",
+      "alignment": "Darkness",
+      "weapon": "Keyblade",
+      "origin": "Sora's Heart",
+      "debut": "Dream Drop Distance",
+      "species": "Nightmare",
+      "image": "personajes/ArmoredVentus.png"
     },
     {
       "id": 155,

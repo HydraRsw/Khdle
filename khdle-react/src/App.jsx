@@ -17,7 +17,7 @@ function App() {
     if (lista.length > 0) {
       const randomCharacter = lista[Math.floor(Math.random() * lista.length)];
       setSecretCharacter(randomCharacter);
-      console.log("Shhh... The secret character is:", randomCharacter.name);
+      //console.log("Shhh... The secret character is:", randomCharacter.name);
     }
   };
 

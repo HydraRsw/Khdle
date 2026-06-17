@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-// Recibimos 'guesses' aquí (por defecto un arreglo vacío si no viene nada)
 function SearchBox({ personajes, onGuess, guesses = [] }) {
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  
+  // 1. Creamos una referencia para el contenedor del buscador
+  const searchRef = useRef(null);
 
-  // FILTRO MEJORADO: 
-  // 1. Revisa si el nombre incluye lo escrito.
-  // 2. Revisa que el personaje NO esté ya dentro de la lista de intentos (guesses).
+  // Filtro de personajes (excluyendo los que ya fueron arriesgados)
   const filtrados = personajes.filter((p) =>
     p.name.toLowerCase().includes(input.toLowerCase()) &&
     !guesses.some((g) => g.id === p.id)
   );
+
+  // 2. Efecto para escuchar los clics fuera del componente
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Si la referencia existe y el lugar donde se hizo clic NO está dentro del buscador...
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setIsOpen(false); // Cerramos las sugerencias
+      }
+    };
+
+    // Escuchamos los clics en todo el documento
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    // Limpiamos el evento cuando el componente se desmonte para evitar fugas de memoria
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleSelect = (personaje) => {
     onGuess(personaje);
@@ -20,7 +38,8 @@ function SearchBox({ personajes, onGuess, guesses = [] }) {
   };
 
   return (
-    <div className="search-container">
+    /* 3. Le asignamos la referencia al div contenedor principal */
+    <div className="search-container" ref={searchRef}>
       <div className="search-input-row">
         <input
           type="text"
