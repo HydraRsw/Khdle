@@ -27,7 +27,7 @@ useEffect(() => {
       if (cleanData.length > 0) {
         const randomCharacter = cleanData[Math.floor(Math.random() * cleanData.length)];
         setSecretCharacter(randomCharacter);
-        console.log("Shhh... The secret character is:", randomCharacter.name);
+        //console.log("Shhh... The secret character is:", randomCharacter.name);
       }
     })
     .catch(err => console.error("Error fetching JSON data:", err));
