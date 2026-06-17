@@ -67,12 +67,12 @@
     },
     {
       "id": 7,
-      "name": "Lea / Axel",
+      "name": "Lea",
       "gender": "Male",
       "alignment": "Light",
       "weapon": "Chakrams",
       "origin": "Radiant Garden",
-      "debut": "Chain of Memories",
+      "debut": "Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/e/e5/Lea_KHIII.png"
     },
@@ -254,7 +254,7 @@
     },
     {
       "id": 24,
-      "name": "Marluxia / Lauriam",
+      "name": "Marluxia",
       "gender": "Male",
       "alignment": "Darkness",
       "weapon": "Scythe",
@@ -265,7 +265,7 @@
     },
     {
       "id": 25,
-      "name": "Larxene / Elrena",
+      "name": "Larxene",
       "gender": "Female",
       "alignment": "Darkness",
       "weapon": "Knives",
@@ -1332,7 +1332,7 @@
     },
     {
       "id": 122,
-      "name": "Fix-It Felix Jr.",
+      "name": "Felix Jr.",
       "gender": "Male",
       "alignment": "Light",
       "weapon": "Hammer",
@@ -2058,7 +2058,7 @@
     },
     {
       "id": 188,
-      "name": "Wreck-It Ralph",
+      "name": "Ralph",
       "gender": "Male",
       "alignment": "Light",
       "weapon": "Fists",
@@ -2099,5 +2099,38 @@
       "debut": "Kingdom Hearts II",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/d/da/Profile_-_Shan_Yu.jpeg"
+    },
+     {
+      "id": 192,
+      "name": "Axel",
+      "gender": "Male",
+      "alignment": "Darkness",
+      "weapon": "Chakrams",
+      "origin": "Radiant Garden",
+      "debut": "Chain of Memories",
+      "species": "Human",
+      "image": "https://static.wikia.nocookie.net/kingdomhearts/images/0/0a/Axel_KHHD1.png/revision/latest?cb=20190217044616"
+    },
+     {
+      "id": 193,
+      "name": "Lauriam",
+      "gender": "Male",
+      "alignment": "Light",
+      "weapon": "Keyblade",
+      "origin": "Daybreak Town",
+      "debut": "Union X",
+      "species": "Human",
+      "image": "https://static.wikia.nocookie.net/kingdomhearts/images/4/49/Lauriam_2_KHUX.png/revision/latest?cb=20210601171841"
+    },
+    {
+      "id": 194,
+      "name": "Elrena",
+      "gender": "Female",
+      "alignment": "Light",
+      "weapon": "Knives",
+      "origin": "Daybreak Town",
+      "debut": "Union X",
+      "species": "Human",
+      "image": "https://static.wikia.nocookie.net/kingdomhearts/images/a/a8/Elrena_KHUX.png/revision/latest?cb=20210601172102"
     }
   ]
