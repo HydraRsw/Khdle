@@ -2109,7 +2109,7 @@
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Human",
-      "image": "/public/personajes/Axel.webp"
+      "image": "/public/personajes/Axel.png"
     },
      {
       "id": 193,
@@ -2120,7 +2120,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "/public/personajes/Lauriam.webp"
+      "image": "/public/personajes/Lauriam.png"
     },
     {
       "id": 194,
@@ -2131,6 +2131,17 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "/public/personajes/Elrena.webp"
+      "image": "/public/personajes/Elrena.png"
+    },
+    {
+      "id": 195,
+      "name": "Tidus",
+      "gender": "Male",
+      "alignment": "Light",
+      "weapon": "Sword",
+      "origin": "Destiny Islands",
+      "debut": "Kingdom Hearts I",
+      "species": "Human",
+      "image": "/public/personajes/Tidus.png"
     }
   ]
