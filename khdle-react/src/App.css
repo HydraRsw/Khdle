@@ -6,10 +6,14 @@ body {
 }
 
 .app-container {
-  display: flex;
+display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
+  align-items: center; /* Centra horizontalmente todos los elementos hijos */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 header h1 {
@@ -20,9 +24,12 @@ header h1 {
 }
 
 .search-container {
-  margin: 30px 0;
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Tamaño máximo ideal para la barra de búsqueda */
+  margin: 20px auto; /* El "auto" a los lados lo fuerza a quedarse centrado */
   display: flex;
-  gap: 10px;
+  flex-direction: column;
 }
 
 .input-wrapper {
@@ -234,6 +241,85 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1a1a1a;
+}
+
+.search-input-row {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.search-input-row input {
+  flex: 1; /* El input toma todo el espacio disponible menos el botón */
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #fff;
+  outline: none;
+}
+
+.search-input-row input:focus {
+  border-color: #007bff;
+}
+
+.search-input-row button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-input-row button:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown de sugerencias para que flote sin empujar el resto del juego */
+.suggestions-list {
+  position: absolute;
+  top: 100%; /* Se despliega justo abajo de la barra */
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  border: 1px solid #444;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100; /* Pasa por encima del tablero de juego */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.suggestions-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 1px solid #333;
+}
+
+.suggestions-list li:hover {
+  background-color: #333;
+}
+
+/* Avatares pequeños dentro de la lista de sugerencias */
+.dropdown-avatar {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 4px;
   background-color: #1a1a1a;
 }
 
