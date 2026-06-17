@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-function VictoryModal({ secret, attempts }) {
+function VictoryModal({ secret, attempts, onTryAgain }) {
   return (
     <motion.div 
       className="victory-container"
@@ -9,7 +9,7 @@ function VictoryModal({ secret, attempts }) {
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 120, damping: 14 }}
     >
-      <h2 className="victory-title">¡VICTORIA!</h2>
+      <h2 className="victory-title">VICTORY!</h2>
       
       <div className="victory-card-info">
         <img 
@@ -19,14 +19,18 @@ function VictoryModal({ secret, attempts }) {
           onError={(e) => e.target.src = 'https://via.placeholder.com/100?text=KH'}
         />
         <div className="victory-details">
-          <p className="victory-text-sub">Adivinaste a</p>
+          <p className="victory-text-sub">You guessed</p>
           <h3 className="victory-character-name">{secret.name}</h3>
         </div>
       </div>
 
       <div className="victory-stats">
-        <p>Número de Intentos: <span className="highlight-attempts">{attempts}</span></p>
+        <p>Attempts: <span className="highlight-attempts">{attempts}</span></p>
+        <button className="try-again-btn" onClick={onTryAgain}>
+        Try Again
+      </button>
       </div>
+      
     </motion.div>
   );
 }

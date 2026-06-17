@@ -318,9 +318,107 @@ button:hover {
 .dropdown-avatar {
   width: 35px;
   height: 35px;
-  object-fit: cover;
+  object-fit: contain; /* ◄── CAMBIADO: Ajusta la imagen entera sin recortar */
   border-radius: 4px;
+  background-color: #1a1a1a; /* Fondo oscuro por si la imagen tiene transparencias o es muy delgada */
+  box-sizing: border-box;
+  border: 1px solid #444; /* Un borde sutil para darle definición */
+}
+
+/* Contenedor que agrupa el SearchBox y el botón Give Up uno al lado del otro */
+.search-and-actions-wrapper {
+  display: flex;
+  align-items: flex-start; /* Alinea los techos */
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 620px; /* Un poco más ancho para albergar ambos componentes */
+  margin: 20px auto;
+}
+
+/* Redefinimos el ancho del search-container interno para que deje espacio al botón */
+.search-and-actions-wrapper .search-container {
+  flex: 1; /* Toma todo el espacio sobrante */
+  margin: 0; /* Limpiamos márgenes externos */
+}
+
+/* Botón Give Up estilizado (Rojo/Naranja apagado estilo juego) */
+.give-up-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #991b1b; /* Rojo oscuro */
+  color: #fca5a5;
+  border: 2px solid #7f1d1d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+  height: 48px; /* Altura idéntica a la de tu input y botón Guess */
+  box-sizing: border-box;
+}
+
+.give-up-btn:hover {
+  background-color: #b91c1c;
+  color: #fff;
+}
+
+/* Botón Try Again (Azul/Verde brillante para invitar a jugar de nuevo) */
+.try-again-btn {
+  margin-top: 18px;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #2563eb; /* Azul corporativo/juego */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.try-again-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Contenedor de Rendición / Derrota */
+.defeat-box {
+  background-color: #3b1111; /* Fondo rojo vino oscuro */
+  border: 2px solid #7f1d1d;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.defeat-box h2 {
+  font-size: 2.2rem;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  color: #fca5a5;
+}
+
+.defeat-subtext {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin: 0 0 15px 0;
+}
+
+.defeat-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #ef4444;
   background-color: #1a1a1a;
 }
 
-
+.defeat-box h3 {
+  font-size: 1.6rem;
+  margin: 10px 0 0 0;
+  color: #fff;
+}

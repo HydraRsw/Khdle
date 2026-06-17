@@ -10,30 +10,44 @@ function App() {
   const [secretCharacter, setSecretCharacter] = useState(null);
   const [guesses, setGuesses] = useState([]);
   const [hasWon, setHasWon] = useState(false); // Estado para controlar la victoria
+  const [hasGivenUp, setHasGivenUp] = useState(false); // Estado para controlar la rendición
 
-useEffect(() => {
-  // Le agregamos un número único basado en el tiempo (?v=12345678)
-  const cacheBuster = `?v=${new Date().getTime()}`;
+  // Función separada para elegir un personaje al azar de la lista
+  const selectRandomCharacter = (lista) => {
+    if (lista.length > 0) {
+      const randomCharacter = lista[Math.floor(Math.random() * lista.length)];
+      setSecretCharacter(randomCharacter);
+      console.log("Shhh... The secret character is:", randomCharacter.name);
+    }
+  };
 
-  fetch(`${import.meta.env.BASE_URL}personajes.json${cacheBuster}`)
-    .then(res => {
-      if (!res.ok) throw new Error("No se pudo abrir el archivo personajes.json");
-      return res.json();
-    })
-    .then(data => {
-      const cleanData = data.filter(p => p && p.name);
-      setPersonajes(cleanData);
-      
-      if (cleanData.length > 0) {
-        const randomCharacter = cleanData[Math.floor(Math.random() * cleanData.length)];
-        setSecretCharacter(randomCharacter);
-        console.log("Shhh... The secret character is:", randomCharacter.name);
-      }
-    })
-    .catch(err => console.error("Error fetching JSON data:", err));
-}, []);
+  useEffect(() => {
+    // Le agregamos un número único basado en el tiempo (?v=12345678)
+    const cacheBuster = `?v=${new Date().getTime()}`;
+
+    fetch(`${import.meta.env.BASE_URL}personajes.json${cacheBuster}`)
+      .then(res => {
+        if (!res.ok) throw new Error("No se pudo abrir el archivo personajes.json");
+        return res.json();
+      })
+      .then(data => {
+        const cleanData = data.filter(p => p && p.name);
+        setPersonajes(cleanData);
+        selectRandomCharacter(cleanData); // Selecciona el primer personaje
+      })
+      .catch(err => console.error("Error fetching JSON data:", err));
+  }, []);
+
+  // Función para Reiniciar el Juego (Resetear todos los estados)
+  const resetGame = () => {
+    setGuesses([]);
+    setHasWon(false);
+    setHasGivenUp(false);
+    selectRandomCharacter(personajes); // Elige un nuevo personaje aleatorio
+  };
+
   const handleGuess = (character) => {
-    if (hasWon) return; // Si ya ganó, bloquear más intentos
+    if (hasWon || hasGivenUp) return; // Bloquear más intentos si ya ganó o se rindió
     if (guesses.some(g => g.id === character.id)) return;
     
     const updatedGuesses = [character, ...guesses];
@@ -48,6 +62,9 @@ useEffect(() => {
     }
   };
 
+  // El juego termina si el usuario gana o se rinde
+  const isGameOver = hasWon || hasGivenUp;
+
   return (
     <div className="app-container">
       <header>
@@ -55,15 +72,40 @@ useEffect(() => {
         <p>Guess the Kingdom Hearts character of the day!</p>
       </header>
 
-      {/* Ocultar la barra de búsqueda si el jugador ya ganó */}
-      {!hasWon && <SearchBox personajes={personajes} onGuess={handleGuess} />}
+      {/* Contenedor wrapper para el buscador y el botón Give Up al lado */}
+      {!isGameOver && (
+        <div className="search-and-actions-wrapper">
+          <SearchBox personajes={personajes} onGuess={handleGuess} />
+          <button className="give-up-btn" onClick={() => setHasGivenUp(true)}>
+            Give Up
+          </button>
+        </div>
+      )}
       
-      {/* Componente de Victoria al estilo Loldle */}
+      {/* Componente de Victoria al estilo Loldle (Le pasamos resetGame para su botón) */}
       {hasWon && secretCharacter && (
         <VictoryModal 
           secret={secretCharacter} 
           attempts={guesses.length} 
+          onTryAgain={resetGame} // Se lo pasamos como prop a tu modal
         />
+      )}
+
+      {/* Pantalla de Derrota/Rendición si presiona Give Up */}
+      {hasGivenUp && secretCharacter && (
+        <div className="defeat-box">
+          <h2>TE RENDISTE</h2>
+          <p className="defeat-subtext">El personaje secreto era:</p>
+          <img 
+            src={secretCharacter.image} 
+            alt={secretCharacter.name} 
+            onError={(e) => e.target.src = 'https://via.placeholder.com/100?text=KH'} 
+          />
+          <h3>{secretCharacter.name}</h3>
+          <button className="try-again-btn" onClick={resetGame}>
+            Try Again
+          </button>
+        </div>
       )}
 
       <div className="game-grid">
