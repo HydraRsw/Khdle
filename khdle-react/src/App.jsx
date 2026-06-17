@@ -12,12 +12,12 @@ function App() {
   const [hasWon, setHasWon] = useState(false); // Estado para controlar la victoria
 
 useEffect(() => {
-  // import.meta.env.BASE_URL le dice a React automáticamente si está en localhost o en /Khdle/
-  fetch(`${import.meta.env.BASE_URL}personajes.json`)
+  // Le agregamos un número único basado en el tiempo (?v=12345678)
+  const cacheBuster = `?v=${new Date().getTime()}`;
+
+  fetch(`${import.meta.env.BASE_URL}personajes.json${cacheBuster}`)
     .then(res => {
-      if (!res.ok) {
-        throw new Error("No se pudo abrir el archivo personajes.json");
-      }
+      if (!res.ok) throw new Error("No se pudo abrir el archivo personajes.json");
       return res.json();
     })
     .then(data => {
@@ -27,7 +27,7 @@ useEffect(() => {
       if (cleanData.length > 0) {
         const randomCharacter = cleanData[Math.floor(Math.random() * cleanData.length)];
         setSecretCharacter(randomCharacter);
-        //console.log("Shhh... The secret character is:", randomCharacter.name);
+        console.log("Shhh... The secret character is:", randomCharacter.name);
       }
     })
     .catch(err => console.error("Error fetching JSON data:", err));
