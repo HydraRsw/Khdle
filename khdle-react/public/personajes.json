@@ -2109,7 +2109,7 @@
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Human",
-      "image": "/public/personajes/Axel.png"
+      "image": "personajes/Axel.png"
     },
      {
       "id": 193,
@@ -2120,7 +2120,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "/public/personajes/Lauriam.png"
+      "image": "personajes/Lauriam.png"
     },
     {
       "id": 194,
@@ -2131,7 +2131,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "/public/personajes/Elrena.png"
+      "image": "personajes/Elrena.png"
     },
     {
       "id": 195,
@@ -2142,6 +2142,6 @@
       "origin": "Destiny Islands",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "/public/personajes/Tidus.png"
+      "image": "personajes/Tidus.png"
     }
   ]

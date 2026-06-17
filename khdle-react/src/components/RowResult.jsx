@@ -27,10 +27,11 @@ function AnimateBox({ attr, guess, secret, index }) {
       {attr === 'image' ? (
         <div className="image-container">
           <img 
-            src={guess.image} 
-            alt="avatar" 
-            onError={(e) => e.target.src = 'https://via.placeholder.com/100?text=KH'} 
-          />
+  src={p.image.startsWith('http') ? `https://images.weserv.nl/?url=${p.image}` : `${import.meta.env.BASE_URL}${p.image}`} 
+  alt={p.name} 
+  className="dropdown-avatar"
+  onError={(e) => e.target.src = 'https://via.placeholder.com/40?text=KH'}
+/>
         </div>
       ) : (
         <span>{guess[attr] || 'N/A'}</span>

@@ -94,8 +94,8 @@ function App() {
       {/* Pantalla de Derrota/Rendición si presiona Give Up */}
       {hasGivenUp && secretCharacter && (
         <div className="defeat-box">
-          <h2>TE RENDISTE</h2>
-          <p className="defeat-subtext">El personaje secreto era:</p>
+          <h2>YOU GAVE UP</h2>
+          <p className="defeat-subtext">The secret character was:</p>
           <img 
             src={secretCharacter.image} 
             alt={secretCharacter.name} 
