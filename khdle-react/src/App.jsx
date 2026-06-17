@@ -11,27 +11,27 @@ function App() {
   const [guesses, setGuesses] = useState([]);
   const [hasWon, setHasWon] = useState(false); // Estado para controlar la victoria
 
-  useEffect(() => {
-    fetch('/personajes.json')
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("No se pudo abrir el archivo personajes.json");
-        }
-        return res.json();
-      })
-      .then(data => {
-        const cleanData = data.filter(p => p && p.name);
-        setPersonajes(cleanData);
-        
-        if (cleanData.length > 0) {
-          const randomCharacter = cleanData[Math.floor(Math.random() * cleanData.length)];
-          setSecretCharacter(randomCharacter);
-          //console.log("Shhh... The secret character is:", randomCharacter.name);
-        }
-      })
-      .catch(err => console.error("Error fetching JSON data:", err));
-  }, []);
-
+useEffect(() => {
+  // import.meta.env.BASE_URL le dice a React automáticamente si está en localhost o en /Khdle/
+  fetch(`${import.meta.env.BASE_URL}personajes.json`)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("No se pudo abrir el archivo personajes.json");
+      }
+      return res.json();
+    })
+    .then(data => {
+      const cleanData = data.filter(p => p && p.name);
+      setPersonajes(cleanData);
+      
+      if (cleanData.length > 0) {
+        const randomCharacter = cleanData[Math.floor(Math.random() * cleanData.length)];
+        setSecretCharacter(randomCharacter);
+        console.log("Shhh... The secret character is:", randomCharacter.name);
+      }
+    })
+    .catch(err => console.error("Error fetching JSON data:", err));
+}, []);
   const handleGuess = (character) => {
     if (hasWon) return; // Si ya ganó, bloquear más intentos
     if (guesses.some(g => g.id === character.id)) return;
