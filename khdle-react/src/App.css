@@ -1,14 +1,32 @@
+/* ==========================================================================
+   1. REGISTRO DE FUENTE Y ESTILOS BASE
+   ========================================================================== */
+@font-face {
+  font-family: 'KingdomHearts';
+  src: url('./assets/fonts/KH2_ALL_MENU_I.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  margin: 0;
-  background-color: #121212;
+margin: 0;
+  /* El '../' le dice al CSS que salga de su ubicación y busque en la carpeta assets */
+  background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+                    url('./assets/Background.jpg');
+  
+  background-size: cover;        /* Fuerza a la imagen a cubrir toda la pantalla sin deformarse */
+  background-position: center;   /* Centra la imagen horizontal y verticalmente */
+  background-repeat: no-repeat;  /* Evita que la imagen se duplique en mosaico */
+  background-attachment: fixed;  /* Mantiene el fondo estático al hacer scroll (efecto premium) */
+  
   color: #ffffff;
   font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 .app-container {
-display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente todos los elementos hijos */
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -16,92 +34,202 @@ display: flex;
   box-sizing: border-box;
 }
 
+/* ==========================================================================
+   2. HEADER Y TEXTOS (CON DISTANCIAS MEJORADAS)
+   ========================================================================== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+header img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto 5px auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Subtítulo principal: Reducido de 75px a un tamaño legible con aire */
+/* Subtítulo principal: Grande, imponente y con aire para que no se pegue */
+header p {
+  font-family: 'KingdomHearts', 'Segoe UI', sans-serif;
+  font-size: 1.4rem;        /* ◄── Bajamos el tamaño porque la fuente es muy ancha */
+  letter-spacing: 2px;       /* ◄── Reducimos el espaciado para que no se desborde */
+  margin-top: 25px;
+  margin-bottom: 35px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: normal;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 header h1 {
+  font-family: 'KingdomHearts', 'Segoe UI', sans-serif;
   font-size: 3rem;
   margin: 0 0 10px 0;
   letter-spacing: 2px;
   color: #0078d7;
+  font-weight: normal;
+}
+
+/* ==========================================================================
+   3. ELEMENTOS DE BÚSQUEDA Y SUGERENCIAS
+   ========================================================================== */
+.search-and-actions-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 620px;
+  margin: 10px auto 40px auto; /* 40px abajo da separación sana al tablero */
+}
+
+.search-and-actions-wrapper .search-container {
+  flex: 1;
+  margin: 0;
 }
 
 .search-container {
   position: relative;
   width: 100%;
-  max-width: 500px; /* Tamaño máximo ideal para la barra de búsqueda */
-  margin: 20px auto; /* El "auto" a los lados lo fuerza a quedarse centrado */
+  max-width: 500px;
   display: flex;
   flex-direction: column;
 }
 
-.input-wrapper {
-  position: relative;
-}
-
-.input-wrapper input {
-  padding: 12px 16px;
-  font-size: 16px;
-  width: 280px;
-  border-radius: 6px;
-  border: 2px solid #333;
-  background-color: #1e1e1e;
-  color: white;
-}
-
-.input-wrapper input:focus {
-  outline: none;
-  border-color: #0078d7;
-}
-
-.autocomplete-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  max-height: 250px;
-  overflow-y: auto;
-  background-color: #1e1e1e;
-  border: 2px solid #333;
-  border-top: none;
-  z-index: 100;
-  border-radius: 0 0 6px 6px;
-}
-
-.autocomplete-item {
-  padding: 10px;
+.search-input-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  transition: background 0.2s;
+  width: 100%;
+  gap: 10px;
 }
 
-.autocomplete-item:hover {
-  background-color: #0078d7;
+.search-input-row input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #fff;
+  outline: none;
 }
 
-.autocomplete-item img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 4px;
-  background-color: #2a2a2a;
+.search-input-row input:focus {
+  border-color: #007bff;
 }
 
-button {
+/* Estilos globales para botones de interacción de juego */
+/* Botón Guess */
+button, .search-input-row button, .try-again-btn {
+  font-family: 'KingdomHearts', sans-serif;
   padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #0078d7;
+  font-size: 0.9rem;         /* ◄── Reducido sutilmente para balancear el ancho */
+  font-weight: normal;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  letter-spacing: 1px;       /* ◄── Ajustado para esta fuente extendida */
+  transition: background-color 0.2s;
+  text-transform: uppercase;
 }
 
-button:hover {
-  background-color: #005bb5;
+/* Botón Give Up */
+.give-up-btn {
+  font-family: 'KingdomHearts', sans-serif;
+  padding: 12px 20px;
+  font-size: 0.9rem;         /* ◄── Emparejado con el botón Guess */
+  font-weight: normal;
+  background-color: #991b1b;
+  color: #fca5a5;
+  border: 2px solid #7f1d1d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  height: 48px;
+  box-sizing: border-box;
+  letter-spacing: 1px;       /* ◄── Ajustado */
+  text-transform: uppercase;
 }
 
+.give-up-btn:hover {
+  background-color: #b91c1c;
+  color: #fff;
+}
+
+.try-again-btn {
+  margin-top: 18px;
+  background-color: #2563eb;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.try-again-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Lista Autocompletada del Buscador */
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  border: 1px solid #444;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.suggestions-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 1px solid #333;
+}
+
+.suggestions-list li:hover {
+  background-color: #333;
+}
+
+.dropdown-avatar {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  border: 1px solid #444;
+}
+
+/* Evitamos selectores huérfanos del viejo input-wrapper si usas search-input-row */
+.input-wrapper { position: relative; }
+.input-wrapper input { width: 280px; padding: 12px 16px; font-size: 16px; border-radius: 6px; border: 2px solid #333; background-color: #1e1e1e; color: white; }
+.autocomplete-items { position: absolute; top: 100%; left: 0; right: 0; max-height: 250px; overflow-y: auto; background-color: #1e1e1e; border: 2px solid #333; border-top: none; z-index: 100; border-radius: 0 0 6px 6px; }
+.autocomplete-item { padding: 10px; display: flex; align-items: center; gap: 12px; cursor: pointer; transition: background 0.2s; }
+.autocomplete-item:hover { background-color: #0078d7; }
+.autocomplete-item img { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; background-color: #2a2a2a; }
+
+/* ==========================================================================
+   4. TABLERO DE RESULTADOS (GRID Y CASILLAS)
+   ========================================================================== */
 .game-grid {
   width: 100%;
   max-width: 820px;
@@ -141,7 +269,7 @@ button:hover {
 .box img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ajusta la imagen completa dentro del cuadro sin deformarla */
+  object-fit: contain;
   display: block;
 }
 
@@ -155,9 +283,25 @@ button:hover {
   border: 2px solid #b22222;
 }
 
-/* Contenedor de Victoria estilo Loldle */
+.neutral-box {
+  background-color: #212529;
+  border: 2px solid #495057;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+}
+
+/* ==========================================================================
+   5. MODALES Y VENTANAS FINALES (VICTORIA / DERROTA)
+   ========================================================================== */
 .victory-container {
-  background-color: #123524; /* Fondo verde oscuro de éxito */
+  background-color: #123524;
   border: 2px solid #2e8b57;
   border-radius: 12px;
   padding: 25px 40px;
@@ -170,11 +314,12 @@ button:hover {
 }
 
 .victory-title {
+  font-family: 'KingdomHearts', sans-serif;
   font-size: 2.5rem;
   color: #ffffff;
   margin: 0 0 20px 0;
-  letter-spacing: 3px;
-  font-weight: 800;
+  letter-spacing: 5px;
+  font-weight: normal;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -222,169 +367,14 @@ button:hover {
 }
 
 .highlight-attempts {
-  color: #38bdf8; /* Azul claro para destacar el número */
+  color: #38bdf8;
   font-size: 1.4rem;
   font-weight: 800;
   margin-left: 5px;
 }
 
-/* Casilla Neutra exclusiva para la Imagen del personaje */
-.neutral-box {
-  background-color: #212529; /* Gris oscuro neutro */
-  border: 2px solid #495057;
-}
-
-/* Contenedor interno para asegurar el encuadre perfecto */
-.image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1a1a1a;
-}
-
-.search-input-row {
-  display: flex;
-  width: 100%;
-  gap: 10px;
-}
-
-.search-input-row input {
-  flex: 1; /* El input toma todo el espacio disponible menos el botón */
-  padding: 12px 16px;
-  font-size: 1rem;
-  border: 2px solid #444;
-  border-radius: 6px;
-  background-color: #1a1a1a;
-  color: #fff;
-  outline: none;
-}
-
-.search-input-row input:focus {
-  border-color: #007bff;
-}
-
-.search-input-row button {
-  padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.search-input-row button:hover {
-  background-color: #0056b3;
-}
-
-/* Dropdown de sugerencias para que flote sin empujar el resto del juego */
-.suggestions-list {
-  position: absolute;
-  top: 100%; /* Se despliega justo abajo de la barra */
-  left: 0;
-  width: 100%;
-  background-color: #222;
-  border: 1px solid #444;
-  border-top: none;
-  border-radius: 0 0 6px 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  max-height: 250px;
-  overflow-y: auto;
-  z-index: 100; /* Pasa por encima del tablero de juego */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-.suggestions-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 15px;
-  cursor: pointer;
-  color: #fff;
-  border-bottom: 1px solid #333;
-}
-
-.suggestions-list li:hover {
-  background-color: #333;
-}
-
-/* Avatares pequeños dentro de la lista de sugerencias */
-.dropdown-avatar {
-  width: 35px;
-  height: 35px;
-  object-fit: contain; /* ◄── CAMBIADO: Ajusta la imagen entera sin recortar */
-  border-radius: 4px;
-  background-color: #1a1a1a; /* Fondo oscuro por si la imagen tiene transparencias o es muy delgada */
-  box-sizing: border-box;
-  border: 1px solid #444; /* Un borde sutil para darle definición */
-}
-
-/* Contenedor que agrupa el SearchBox y el botón Give Up uno al lado del otro */
-.search-and-actions-wrapper {
-  display: flex;
-  align-items: flex-start; /* Alinea los techos */
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  max-width: 620px; /* Un poco más ancho para albergar ambos componentes */
-  margin: 20px auto;
-}
-
-/* Redefinimos el ancho del search-container interno para que deje espacio al botón */
-.search-and-actions-wrapper .search-container {
-  flex: 1; /* Toma todo el espacio sobrante */
-  margin: 0; /* Limpiamos márgenes externos */
-}
-
-/* Botón Give Up estilizado (Rojo/Naranja apagado estilo juego) */
-.give-up-btn {
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #991b1b; /* Rojo oscuro */
-  color: #fca5a5;
-  border: 2px solid #7f1d1d;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
-  height: 48px; /* Altura idéntica a la de tu input y botón Guess */
-  box-sizing: border-box;
-}
-
-.give-up-btn:hover {
-  background-color: #b91c1c;
-  color: #fff;
-}
-
-/* Botón Try Again (Azul/Verde brillante para invitar a jugar de nuevo) */
-.try-again-btn {
-  margin-top: 18px;
-  padding: 10px 30px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  background-color: #2563eb; /* Azul corporativo/juego */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.try-again-btn:hover {
-  background-color: #1d4ed8;
-}
-
-/* Contenedor de Rendición / Derrota */
 .defeat-box {
-  background-color: #3b1111; /* Fondo rojo vino oscuro */
+  background-color: #3b1111;
   border: 2px solid #7f1d1d;
   border-radius: 10px;
   padding: 20px;
@@ -396,10 +386,12 @@ button:hover {
 }
 
 .defeat-box h2 {
+  font-family: 'KingdomHearts', sans-serif;
   font-size: 2.2rem;
   margin: 0 0 5px 0;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   color: #fca5a5;
+  font-weight: normal;
 }
 
 .defeat-subtext {
@@ -423,12 +415,10 @@ button:hover {
   color: #fff;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN (Para Celulares y Tablets)
-   ========================================== */
-
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (MÓVIL Y TABLETS)
+   ========================================================================== */
 @media (max-width: 768px) {
-  /* 1. Ajustamos el contenedor general */
   .app-container {
     padding: 10px;
   }
@@ -438,18 +428,23 @@ button:hover {
     margin-bottom: 2px;
   }
 
+  header img {
+    max-width: 280px;
+  }
+
   header p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
     padding: 0 10px;
   }
 
-  /* 2. Rediseñamos el bloque del buscador y Give Up para que se apilen en vertical */
   .search-and-actions-wrapper {
     flex-direction: column;
     align-items: center;
     gap: 8px;
     width: 100%;
     padding: 0 5px;
+    margin-bottom: 25px;
   }
 
   .search-and-actions-wrapper .search-container {
@@ -457,35 +452,29 @@ button:hover {
   }
 
   .give-up-btn {
-    width: 100%; /* Botón Give Up toma todo el ancho abajo del buscador */
+    width: 100%;
     height: 44px;
     padding: 10px;
   }
 
-  /* 3. Volvemos la rejilla del juego deslizable horizontalmente */
-  /* Este es el truco maestro: en vez de romper las cajas, permitimos un scroll suave de lado a lado */
   .game-grid {
     width: 100%;
-    overflow-x: auto; /* Permite deslizar las filas hacia la derecha si no caben */
+    overflow-x: auto;
     padding-bottom: 10px;
-    -webkit-overflow-scrolling: touch; /* Scroll ultra suave en iPhones/iOS */
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Forzamos a que las filas mantengan un ancho mínimo para que las cartas no se aplasten */
-  .grid-header, 
-  .result-row {
-    min-width: 650px; /* Evita que las 7 casillas se vuelvan rectángulos delgados */
-    gap: 4px; /* Pegamos un poco más las casillas para ganar espacio */
+  .grid-header, .result-row {
+    min-width: 650px;
+    gap: 4px;
   }
 
-  /* 4. Hacemos las casillas un poco más compactas en móvil */
   .box {
-    height: 80px; /* Reducimos un poco la escala para que quepa más contenido vertical */
-    font-size: 0.85rem; /* Letra ligeramente más pequeña para textos largos como 'Destiny Islands' */
+    height: 80px;
+    font-size: 0.85rem;
     padding: 4px;
   }
 
-  /* 5. Modificamos el dropdown para que no tape toda la pantalla */
   .suggestions-list {
     max-height: 200px;
   }
@@ -496,7 +485,6 @@ button:hover {
   }
 }
 
-/* Ajustes extra para pantallas mini (Celulares muy pequeños) */
 @media (max-width: 480px) {
   .box {
     height: 75px;
@@ -505,5 +493,14 @@ button:hover {
   
   .grid-header span {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ... tus otros estilos móviles ... */
+  header p {
+    font-size: 0.9rem;       /* Súper compacto para pantallas táctiles verticales */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
   }
 }

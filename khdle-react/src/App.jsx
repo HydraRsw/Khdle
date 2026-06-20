@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <img src="/logo.png" alt="KHDle" />
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="KHDle" />
         <p>Guess the Kingdom Hearts character of the day!</p>
       </header>
 

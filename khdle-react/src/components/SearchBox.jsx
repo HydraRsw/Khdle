@@ -51,11 +51,11 @@ function SearchBox({ personajes, onGuess, guesses = [] }) {
           }}
           onFocus={() => input.length > 0 && setIsOpen(true)}
         />
-        <button
+      {/* <button
           onClick={() => filtrados.length > 0 && handleSelect(filtrados[0])}
         >
           Guess
-        </button>
+        </button> */}
       </div>
 
       {isOpen && filtrados.length > 0 && (
