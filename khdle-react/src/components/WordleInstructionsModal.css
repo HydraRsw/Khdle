@@ -1,0 +1,115 @@
+/* Contenedor oscuro difuminado de fondo */
+.wordle-instructions-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caja del modal con estética de interfaz de juego */
+.wordle-instructions-modal {
+  background-color: #0b1a24;
+  border: 3px solid #ffc107; /* Borde dorado similar a la referencia */
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  color: #ffffff;
+  text-align: left;
+  box-shadow: 0px 0px 25px rgba(255, 193, 7, 0.2);
+}
+
+.instructions-title {
+  color: #ffc107;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.instructions-body p, .instructions-body li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #dae5ed;
+}
+
+.modes-explanation h4 {
+  color: #00bcd4;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.select-prompt {
+  margin-top: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Contenedor de botones de selección de dificultad */
+.difficulty-selector-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 15px 0 25px 0;
+}
+
+.diff-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.normal-btn {
+  background-color: #1e4620; /* Verde oscuro opaco */
+}
+
+.normal-btn.active {
+  background-color: #2e7d32; /* Verde brillante activo */
+  border-color: #ffffff;
+  transform: scale(1.05);
+}
+
+.hard-btn {
+  background-color: #5c1d1d; /* Rojo oscuro opaco */
+}
+
+.hard-btn.active {
+  background-color: #c62828; /* Rojo brillante activo */
+  border-color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Botón Start Game principal estilo inferior */
+.start-wordle-game-btn {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #ffb300;
+  color: #000000;
+  border: none;
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.start-wordle-game-btn:hover {
+  background-color: #ffa000;
+}
