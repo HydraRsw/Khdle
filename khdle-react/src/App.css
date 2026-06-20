@@ -422,3 +422,88 @@ button:hover {
   margin: 10px 0 0 0;
   color: #fff;
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN (Para Celulares y Tablets)
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* 1. Ajustamos el contenedor general */
+  .app-container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2px;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  /* 2. Rediseñamos el bloque del buscador y Give Up para que se apilen en vertical */
+  .search-and-actions-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .search-and-actions-wrapper .search-container {
+    width: 100%;
+  }
+
+  .give-up-btn {
+    width: 100%; /* Botón Give Up toma todo el ancho abajo del buscador */
+    height: 44px;
+    padding: 10px;
+  }
+
+  /* 3. Volvemos la rejilla del juego deslizable horizontalmente */
+  /* Este es el truco maestro: en vez de romper las cajas, permitimos un scroll suave de lado a lado */
+  .game-grid {
+    width: 100%;
+    overflow-x: auto; /* Permite deslizar las filas hacia la derecha si no caben */
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch; /* Scroll ultra suave en iPhones/iOS */
+  }
+
+  /* Forzamos a que las filas mantengan un ancho mínimo para que las cartas no se aplasten */
+  .grid-header, 
+  .result-row {
+    min-width: 650px; /* Evita que las 7 casillas se vuelvan rectángulos delgados */
+    gap: 4px; /* Pegamos un poco más las casillas para ganar espacio */
+  }
+
+  /* 4. Hacemos las casillas un poco más compactas en móvil */
+  .box {
+    height: 80px; /* Reducimos un poco la escala para que quepa más contenido vertical */
+    font-size: 0.85rem; /* Letra ligeramente más pequeña para textos largos como 'Destiny Islands' */
+    padding: 4px;
+  }
+
+  /* 5. Modificamos el dropdown para que no tape toda la pantalla */
+  .suggestions-list {
+    max-height: 200px;
+  }
+  
+  .suggestions-list li {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Ajustes extra para pantallas mini (Celulares muy pequeños) */
+@media (max-width: 480px) {
+  .box {
+    height: 75px;
+    font-size: 0.8rem;
+  }
+  
+  .grid-header span {
+    font-size: 0.75rem;
+  }
+}
