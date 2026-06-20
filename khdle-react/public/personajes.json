@@ -19,7 +19,7 @@
       "origin": "Destiny Islands",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/riku.png"
+      "image": "personajes/Riku_KHIII.png"
     },
     {
       "id": 3,
@@ -83,7 +83,7 @@
       "alignment": "Light",
       "weapon": "Keyblade",
       "origin": "Land of Departure",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/6/6d/Terra_KHIII.png"
     },
@@ -94,7 +94,7 @@
       "alignment": "Light",
       "weapon": "Keyblade",
       "origin": "Land of Departure",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/0/0a/Aqua_KHIII.png"
     },
@@ -105,7 +105,7 @@
       "alignment": "Light",
       "weapon": "Keyblade",
       "origin": "Land of Departure",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/f/f0/Ventus_KHIII.png"
     },
@@ -116,9 +116,9 @@
       "alignment": "Light",
       "weapon": "Keyblade",
       "origin": "Land of Departure",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/eraqus.png"
+      "image": "personajes/Master_Eraqus_KHIII.png"
     },
     {
       "id": 12,
@@ -127,7 +127,7 @@
       "alignment": "Darkness",
       "weapon": "Keyblade",
       "origin": "Destiny Islands",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/1/17/Xehanort_KHIII.png"
     },
@@ -140,7 +140,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Heartless",
-      "image": "https://static.wikia.nocookie.net/disney/images/ansem.png"
+      "image": "personajes/Ansem_Seeker_of_Darkness_KHIII.png"
     },
     {
       "id": 14,
@@ -160,13 +160,13 @@
       "alignment": "Darkness",
       "weapon": "Keyblade",
       "origin": "Keyblade Graveyard",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/8/89/Vanitas_KHIII.png"
     },
     {
       "id": 16,
-      "name": "Xigbar / Braig",
+      "name": "Xigbar",
       "gender": "Male",
       "alignment": "Darkness",
       "weapon": "Arrowguns",
@@ -177,58 +177,58 @@
     },
     {
       "id": 17,
-      "name": "Xaldin / Dilan",
+      "name": "Xaldin",
       "gender": "Male",
       "alignment": "Darkness",
       "weapon": "Lances",
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts II",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/xaldin.png"
+      "image": "personajes/Xaldin_KHD.png"
     },
     {
       "id": 18,
-      "name": "Vexen / Even",
+      "name": "Vexen",
       "gender": "Male",
       "alignment": "Neutral",
       "weapon": "Shield",
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/vexen.png"
+      "image": "personajes/Vexen_KHIII.png"
     },
     {
       "id": 19,
-      "name": "Lexaeus / Aeleus",
+      "name": "Lexaeus",
       "gender": "Male",
       "alignment": "Neutral",
       "weapon": "Axe Sword",
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/lexaeus.png"
+      "image": "personajes/Lexaeus_CoM.png"
     },
     {
       "id": 20,
-      "name": "Zexion / Ienzo",
+      "name": "Zexion",
       "gender": "Male",
       "alignment": "Light",
       "weapon": "Lexicon",
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/zexion.png"
+      "image": "personajes/Zexion_KHD.png"
     },
     {
       "id": 21,
-      "name": "Saix / Isa",
+      "name": "Saïx",
       "gender": "Male",
       "alignment": "Darkness",
       "weapon": "Claymore",
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts II",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/saix.png"
+      "image": "personajes/Saix_KHIII.png"
     },
     {
       "id": 22,
@@ -250,7 +250,7 @@
       "origin": "The World That Never Was",
       "debut": "Kingdom Hearts II",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/luxord.png"
+      "image": "personajes/Luxord_KHIII.png"
     },
     {
       "id": 24,
@@ -261,7 +261,7 @@
       "origin": "Daybreak Town",
       "debut": "Chain of Memories",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/marluxia.png"
+      "image": "personajes/Marluxia_KHIII.png"
     },
     {
       "id": 25,
@@ -272,7 +272,7 @@
       "origin": "Daybreak Town",
       "debut": "Chain of Memories",
       "species": "Nobody",
-      "image": "https://static.wikia.nocookie.net/disney/images/larxene.png"
+      "image": "personajes/Larxene_KHIII.png"
     },
     {
       "id": 26,
@@ -283,7 +283,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/ephemer.png"
+      "image": "personajes/Ephemer_KH2.8.png"
     },
     {
       "id": 27,
@@ -294,7 +294,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/skuld.png"
+      "image": "personajes/Skuld_KHX.png"
     },
     {
       "id": 28,
@@ -305,7 +305,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/brain.png"
+      "image": "personajes/Brain_KHUX.png"
     },
     {
       "id": 29,
@@ -327,7 +327,7 @@
       "origin": "Unknown",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/mom.png"
+      "image": "personajes/Master_of_Masters_KH2.8.png"
     },
     {
       "id": 31,
@@ -338,7 +338,7 @@
       "origin": "Unknown",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/luxu.png"
+      "image": "personajes/Luxu_KH2.8.png"
     },
     {
       "id": 32,
@@ -349,7 +349,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/ira.png"
+      "image": "personajes/Ira_KH2.8.png"
     },
     {
       "id": 33,
@@ -360,7 +360,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/invi.png"
+      "image": "personajes/Invi_KH2.8.png"
     },
     {
       "id": 34,
@@ -371,7 +371,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/aced.png"
+      "image": "personajes/Aced_KH2.8.png"
     },
     {
       "id": 35,
@@ -382,7 +382,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/ava.png"
+      "image": "personajes/Ava_KH2.8.png"
     },
     {
       "id": 36,
@@ -393,7 +393,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/gula.png"
+      "image": "personajes/Gula_KH2.8.png"
     },
     {
       "id": 37,
@@ -404,7 +404,7 @@
       "origin": "Daybreak Town",
       "debut": "Union X",
       "species": "Dream Eater",
-      "image": "https://static.wikia.nocookie.net/disney/images/chirithy.png"
+      "image": "personajes/Chirithy_KH3.png"
     },
     {
       "id": 38,
@@ -415,7 +415,7 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/hayner.png"
+      "image": "personajes/Hayner_KHIII.png"
     },
     {
       "id": 39,
@@ -426,7 +426,7 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/pence.png"
+      "image": "personajes/Pence_KHIII.png"
     },
     {
       "id": 40,
@@ -437,7 +437,7 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/olette.png"
+      "image": "personajes/Olette_KHIII.png"
     },
     {
       "id": 41,
@@ -448,7 +448,7 @@
       "origin": "Radiant Garden",
       "debut": "Chain of Memories",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/diz.png"
+      "image": "personajes/Ansem_the_Wise_KHIII.png"
     },
     {
       "id": 42,
@@ -459,7 +459,7 @@
       "origin": "Quadratum",
       "debut": "Kingdom Hearts III",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/yozora.png"
+      "image": "personajes/Yozora_KHIIIRM.png"
     },
     {
       "id": 43,
@@ -470,7 +470,7 @@
       "origin": "Scala ad Caelum",
       "debut": "Dark Road",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/baldr.png"
+      "image": "personajes/Baldr_KHDR.png"
     },
     {
       "id": 44,
@@ -481,7 +481,7 @@
       "origin": "Scala ad Caelum",
       "debut": "Dark Road",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/hermod.png"
+      "image": "personajes/Hermod_KHDR.png"
     },
     {
       "id": 45,
@@ -492,7 +492,7 @@
       "origin": "Scala ad Caelum",
       "debut": "Dark Road",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/urd.png"
+      "image": "personajes/Urd_KHDR.png"
     },
     {
       "id": 46,
@@ -503,7 +503,7 @@
       "origin": "Scala ad Caelum",
       "debut": "Dark Road",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/bragi.png"
+      "image": "personajes/Bragi_KHDR.png"
     },
     {
       "id": 47,
@@ -514,7 +514,7 @@
       "origin": "Scala ad Caelum",
       "debut": "Dark Road",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/vor.png"
+      "image": "personajes/Vor_KHDR.png"
     },
     {
       "id": 48,
@@ -525,7 +525,7 @@
       "origin": "Scala ad Caelum",
       "debut": "Dark Road",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/odin.png"
+      "image": "personajes/Master_Odin_KHDR.png"
     },
     {
       "id": 49,
@@ -536,7 +536,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/leon.png"
+      "image": "personajes/Leon_KHIIIRM.png"
     },
     {
       "id": 50,
@@ -547,7 +547,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/cloud.png"
+      "image": "personajes/KH_-_ReCoded_-_Cloud.PNG.png"
     },
     {
       "id": 51,
@@ -558,7 +558,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/aerith.png"
+      "image": "personajes/Aerith_KHIIIRM.png"
     },
     {
       "id": 52,
@@ -569,7 +569,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/tifa.png"
+      "image": "personajes/TifaCG.png"
     },
     {
       "id": 53,
@@ -580,7 +580,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/yuffie.png"
+      "image": "personajes/Yuffie_KHIIIRM.png"
     },
     {
       "id": 54,
@@ -591,7 +591,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/cid.png"
+      "image": "personajes/Cid_KHIIIRM.png"
     },
     {
       "id": 55,
@@ -602,7 +602,7 @@
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts I",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/sephiroth.png"
+      "image": "personajes/Kh2-sephiroth2.png"
     },
     {
       "id": 56,
@@ -611,9 +611,9 @@
       "alignment": "Light",
       "weapon": "Sword",
       "origin": "Olympus Coliseum",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/zack.png"
+      "image": "personajes/Zack_KHBBS.png"
     },
     {
       "id": 57,
@@ -624,40 +624,40 @@
       "origin": "Olympus Coliseum",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/auron.png"
+      "image": "personajes/Auron.png"
     },
     {
       "id": 58,
-      "name": "Yuna",
+      "name": "Gullwings",
       "gender": "Female",
       "alignment": "Light",
       "weapon": "Magic",
       "origin": "Radiant Garden",
       "debut": "Kingdom Hearts II",
       "species": "Fairy",
-      "image": "https://static.wikia.nocookie.net/disney/images/yuna.png"
+      "image": "personajes/Final_Fantasy_Girl.png"
     },
     {
       "id": 59,
-      "name": "Rikku",
-      "gender": "Female",
-      "alignment": "Light",
-      "weapon": "Daggers",
-      "origin": "Radiant Garden",
-      "debut": "Kingdom Hearts II",
-      "species": "Fairy",
-      "image": "https://static.wikia.nocookie.net/disney/images/rikku.png"
+      "name": "Shadow",
+      "gender": "Neutral",
+      "alignment": "Darkness",
+      "weapon": "None",
+      "origin": "Realm of Darkness",
+      "debut": "Kingdom Hearts I",
+      "species": "Heartless",
+      "image": "personajes/Shadow_KHIII.png"
     },
     {
       "id": 60,
-      "name": "Paine",
-      "gender": "Female",
-      "alignment": "Light",
-      "weapon": "Sword",
-      "origin": "Radiant Garden",
+      "name": "Dusk",
+      "gender": "Neutral",
+      "alignment": "Darkness",
+      "weapon": "None",
+      "origin": "The World That Never Was",
       "debut": "Kingdom Hearts II",
-      "species": "Fairy",
-      "image": "https://static.wikia.nocookie.net/disney/images/paine.png"
+      "species": "Nobody",
+      "image": "personajes/Dusk_KHIII.png"
     },
     {
       "id": 61,
@@ -668,7 +668,7 @@
       "origin": "Traverse Town",
       "debut": "Dream Drop Distance",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/neku.png"
+      "image": "personajes/Neku_Sakuraba_KH3D.png"
     },
     {
       "id": 62,
@@ -679,7 +679,7 @@
       "origin": "Traverse Town",
       "debut": "Dream Drop Distance",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/shiki.png"
+      "image": "personajes/Shiki_KH3D.png"
     },
     {
       "id": 63,
@@ -690,7 +690,7 @@
       "origin": "Traverse Town",
       "debut": "Dream Drop Distance",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/joshua.png"
+      "image": "personajes/Joshua_KH3D.png"
     },
     {
       "id": 64,
@@ -701,7 +701,7 @@
       "origin": "Traverse Town",
       "debut": "Dream Drop Distance",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/beat.png"
+      "image": "personajes/Beat_KH3D.png"
     },
     {
       "id": 65,
@@ -712,7 +712,7 @@
       "origin": "Traverse Town",
       "debut": "Dream Drop Distance",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/rhyme.png"
+      "image": "personajes/Rhyme_KH3D.png"
     },
     {
       "id": 66,
@@ -723,18 +723,18 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/seifer.png"
+      "image": "personajes/Seifer_KHII.png"
     },
     {
       "id": 67,
-      "name": "Fujin",
-      "gender": "Female",
-      "alignment": "Neutral",
-      "weapon": "Chakram",
-      "origin": "Twilight Town",
+      "name": "Meow Wow",
+      "gender": "Neutral",
+      "alignment": "Light",
+      "weapon": "None",
+      "origin": "Realm of Sleep",
       "debut": "Kingdom Hearts II",
-      "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/fujin.png"
+      "species": "Dream Eater",
+      "image": "personajes/Mewooo.png"
     },
     {
       "id": 68,
@@ -745,7 +745,7 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/raijin.png"
+      "image": "personajes/Rai_KHII.png"
     },
     {
       "id": 69,
@@ -756,7 +756,7 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/vivi.png"
+      "image": "personajes/Vivi.png"
     },
     {
       "id": 70,
@@ -767,7 +767,7 @@
       "origin": "Twilight Town",
       "debut": "Kingdom Hearts II",
       "species": "Human",
-      "image": "https://static.wikia.nocookie.net/disney/images/setzer.png"
+      "image": "personajes/KH2-Setzer.png"
     },
     {
       "id": 71,
@@ -903,14 +903,14 @@
     },
     {
       "id": 83,
-      "name": "Achilles",
+      "name": "Braig",
       "gender": "Male",
-      "alignment": "Neutral",
-      "weapon": "Sword",
-      "origin": "Olympus Coliseum",
-      "debut": "Kingdom Hearts III",
-      "species": "Animal",
-      "image": "https://static.wikia.nocookie.net/disney/images/6/67/HATS_Achilles.png"
+      "alignment": "Darkness",
+      "weapon": "Arrowguns",
+      "origin": "Radiant Garden",
+      "debut": "Kingdom Hearts Birth by Sleep",
+      "species": "Human",
+      "image": "personajes/Braig-_Eyepatch_KHBBS.png"
     },
     {
       "id": 84,
@@ -943,7 +943,7 @@
       "origin": "Olympus Coliseum",
       "debut": "Kingdom Hearts III",
       "species": "God",
-      "image": "https://static.wikia.nocookie.net/disney/images/e/e4/Hercules-br-disneyscreencaps_jpg_%281%29.png"
+      "image": "personajes/Apollo_KH3.png"
     },
     {
       "id": 87,
@@ -969,14 +969,14 @@
     },
     {
       "id": 89,
-      "name": "Beagle Boys",
-      "gender": "Multiple",
-      "alignment": "Darkness",
-      "weapon": "Fists",
-      "origin": "Country of the Musketeers",
-      "debut": "Dream Drop Distance",
-      "species": "Animal",
-      "image": "https://static.wikia.nocookie.net/disney/images/6/65/599289-beagle_large.jpg"
+      "name": "Dilan",
+      "gender": "Male",
+      "alignment": "Light",
+      "weapon": "Lance",
+      "origin": "Radiant Garden",
+      "debut": "Kingdom Hearts Birth by Sleep",
+      "species": "Human",
+      "image": "personajes/Dilan_KH3.png"
     },
     {
       "id": 90,
@@ -1068,14 +1068,14 @@
     },
     {
       "id": 98,
-      "name": "Bashful",
+      "name": "Even",
       "gender": "Male",
       "alignment": "Light",
-      "weapon": "Pickaxe",
-      "origin": "Dwarf Woodlands",
-      "debut": "Birth by Sleep",
-      "species": "Dwarf",
-      "image": "https://static.wikia.nocookie.net/disney/images/5/52/Profile_-_Bashful.png"
+      "weapon": "None",
+      "origin": "Radiant Garden",
+      "debut": " Kingdom Hearts Birth by Sleep",
+      "species": "Human",
+      "image": "personajes/Even_KHBBS.png"
     },
     {
       "id": 99,
@@ -1112,14 +1112,14 @@
     },
     {
       "id": 102,
-      "name": "Bo'sun",
+      "name": "Aeleus",
       "gender": "Male",
-      "alignment": "Darkness",
-      "weapon": "Sword",
-      "origin": "Port Royal",
+      "alignment": "Light",
+      "weapon": "Axe Sword",
+      "origin": "Radiant Garden",
       "debut": "Kingdom Hearts II",
-      "species": "Undead",
-      "image": "https://static.wikia.nocookie.net/disney/images/6/6f/Bo%27sun_Blaming_Ragetti_and_Pintel.jpg"
+      "species": "Human",
+      "image": "personajes/Aeleus_KHIII.png"
     },
     {
       "id": 103,
@@ -1227,7 +1227,7 @@
       "alignment": "Light",
       "weapon": "None",
       "origin": "Castle of Dreams",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/e/ec/Profile_-_Prince_Charming.png"
     },
@@ -1299,14 +1299,14 @@
     },
     {
       "id": 119,
-      "name": "Dopey",
+      "name": "Ienzo",
       "gender": "Male",
       "alignment": "Light",
       "weapon": "None",
-      "origin": "Dwarf Woodlands",
-      "debut": "Birth by Sleep",
-      "species": "Dwarf",
-      "image": "https://static.wikia.nocookie.net/disney/images/f/f7/Profile_-_Dopey.png"
+      "origin": "Radiant Garden",
+      "debut": " Kingdom Hearts Birth by Sleep",
+      "species": "Human",
+      "image": "personajes/Ienzo_KHIII.png"
     },
     {
       "id": 120,
@@ -1436,7 +1436,7 @@
       "alignment": "Darkness",
       "weapon": "Laser",
       "origin": "Deep Space",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Alien",
       "image": "https://static.wikia.nocookie.net/disney/images/5/50/Profile_-_Captain_Gantu.jpeg"
     },
@@ -1552,14 +1552,14 @@
     },
     {
       "id": 142,
-      "name": "Judy Hopps",
-      "gender": "Female",
+      "name": "Isa",
+      "gender": "Male",
       "alignment": "Light",
       "weapon": "None",
-      "origin": "Union X",
-      "debut": "Union X",
-      "species": "Animal",
-      "image": "https://static.wikia.nocookie.net/disney/images/d/da/Profile_-_Judy_Hopps.jpeg"
+      "origin": "Radiant Garden",
+      "debut": "Kingdom Hearts Birth by Sleep",
+      "species": "Human",
+      "image": "personajes/Isa_BBS.png"
     },
     {
       "id": 143,
@@ -1810,7 +1810,7 @@
       "alignment": "Light",
       "weapon": "Sword",
       "origin": "Enchanted Dominion",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/8/86/Profile_-_Prince_Phillip.png"
     },
@@ -1953,7 +1953,7 @@
       "alignment": "Darkness",
       "weapon": "Potions",
       "origin": "Dwarf Woodlands",
-      "debut": "Birth by Sleep",
+      "debut": " Kingdom Hearts Birth by Sleep",
       "species": "Human",
       "image": "https://static.wikia.nocookie.net/disney/images/8/89/Profile_-_The_Evil_Queen.jpeg"
     },
