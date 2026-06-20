@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>KHDle</h1>
+        <img src="/logo.png" alt="KHDle" />
         <p>Guess the Kingdom Hearts character of the day!</p>
       </header>
 
